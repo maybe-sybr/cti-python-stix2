@@ -1,5 +1,6 @@
 """Classes for representing properties of STIX Objects and Cyber Observables."""
 
+import abc
 import base64
 import binascii
 import collections.abc
@@ -110,7 +111,7 @@ def _validate_type(type_, spec_version):
         )
 
 
-class Property(object):
+class Property(object, metaclass=abc.ABCMeta):
     """Represent a property of STIX data type.
 
     Subclasses can define the following attributes as keyword arguments to
