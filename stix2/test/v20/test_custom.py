@@ -571,7 +571,7 @@ def test_custom_observable_object_invalid_ref_property():
         )
         class NewObs():
             pass
-    assert "is named like an object reference property but is not an ObjectReferenceProperty" in str(excinfo.value)
+    assert "is named like a reference property but is not" in str(excinfo.value)
 
 
 def test_custom_observable_object_invalid_refs_property():
@@ -583,7 +583,7 @@ def test_custom_observable_object_invalid_refs_property():
         )
         class NewObs():
             pass
-    assert "is named like an object reference list property but is not a ListProperty containing ObjectReferenceProperty" in str(excinfo.value)
+    assert "is named like a reference list property but is not" in str(excinfo.value)
 
 
 def test_custom_observable_object_invalid_refs_list_property():
@@ -595,7 +595,7 @@ def test_custom_observable_object_invalid_refs_list_property():
         )
         class NewObs():
             pass
-    assert "is named like an object reference list property but is not a ListProperty containing ObjectReferenceProperty" in str(excinfo.value)
+    assert "is named like a reference list property but is not" in str(excinfo.value)
 
 
 def test_custom_observable_object_invalid_valid_refs():
